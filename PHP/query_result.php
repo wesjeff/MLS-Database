@@ -6,19 +6,14 @@ echo "<h1>Query Results</h1>";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = $_POST['query'];
     $result = $conn->query($query);
-
     if ($result) {
         if ($result instanceof mysqli_result && $result->num_rows > 0) {
             echo "<table border='1'><tr>";
-            
-            // headers
             $fields = $result->fetch_fields();
             foreach ($fields as $field) {
                 echo "<th>".$field->name."</th>";
             }
             echo "</tr>";
-
-            // rows
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 foreach ($row as $col) {
@@ -35,11 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $conn->error;
     }
-
     $conn->close();
 } else {
     echo "No query was submitted.";
 }
-
-echo '<p><a href="query.php">⬅ Back to Query Page</a></p>';
+echo '<p><a href="query.php">Back to Query Page</a></p>';
 ?>
