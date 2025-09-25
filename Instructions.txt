@@ -17,7 +17,7 @@ Don't make an account, just click "No thanks, just start my download"
 3) Start XAMPP, start Apache and MySQL. THEN open MySQL Workbench
 
 
-4) Download files from GitHub. Put the .php files in C:\xampp\htdocs\COP4710, then put all the other files wherever you want, their location does not matter.
+4) Download files from GitHub. Put the .php files in C:\xampp\htdocs\COP4710, then put all the files (from Turn In) wherever you want, their location does not matter.
 
 
 5) Open the 2-WORKING and 3-WORKING SQL scripts, run them in that order
