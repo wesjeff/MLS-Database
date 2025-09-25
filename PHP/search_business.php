@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $maxPrice = $_POST['maxPrice'];
     $minSize = $_POST['minSize'];
     $maxSize = $_POST['maxSize'];
-
     $sql = "SELECT L.mlsNumber, P.address, P.ownerName, P.price, B.type, B.size
             FROM Listings L
             JOIN Property P ON L.address = P.address
@@ -14,9 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             WHERE P.price BETWEEN $minPrice AND $maxPrice
             AND B.size BETWEEN $minSize AND $maxSize
             ORDER BY P.price DESC";
-
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
         echo "<h1>Business Property Search Results</h1>";
         echo "<table border='1'><tr><th>MLS</th><th>Address</th><th>Owner</th><th>Price</th><th>Type</th><th>Size</th></tr>";

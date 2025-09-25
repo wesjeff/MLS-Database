@@ -3,9 +3,7 @@ include 'db.php';
 
 $sql = "SELECT * FROM Buyer ORDER BY name ASC";
 $result = $conn->query($sql);
-
 echo "<h1>Buyers</h1>";
-
 if ($result->num_rows > 0) {
     echo "<table border='1'>
             <tr>

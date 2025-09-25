@@ -16,7 +16,6 @@ if ($result->num_rows > 0) {
 } else {
   echo "No houses found";
 }
-
 echo "<h1>Business Property Listings</h1>";
 $sql = "SELECT L.mlsNumber, P.address, P.ownerName, P.price, B.type, B.size
         FROM Listings L

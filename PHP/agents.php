@@ -7,9 +7,7 @@ $sql = "SELECT A.agentId, A.name AS agentName, A.phone, F.name AS firmName, F.ad
         ORDER BY A.name ASC";
 
 $result = $conn->query($sql);
-
 echo "<h1>Agents</h1>";
-
 if ($result->num_rows > 0) {
     echo "<table border='1'><tr><th>Agent ID</th><th>Name</th><th>Phone</th><th>Firm</th><th>Firm Address</th><th>Date Started</th></tr>";
     while($row = $result->fetch_assoc()) {
