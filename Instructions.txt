@@ -1,0 +1,26 @@
+READ BEFORE STARTING ANYTHING
+
+1) You need to install XAMPP, pretty straight forward.
+
+It will install to C:\xampp
+After it installs, put the PHP files here:
+
+C:\xampp\htdocs\COP4710
+(You'll need to make the COP4710 folder)
+
+
+2) Install MySQL Workbench - https://dev.mysql.com/downloads/file/?id=544368
+
+Don't make an account, just click "No thanks, just start my download"
+
+
+3) Start XAMPP, start Apache and MySQL. THEN open MySQL Workbench
+
+
+4) Download files from GitHub. Put the .php files in C:\xampp\htdocs\COP4710, then put all the other files wherever you want, their location does not matter.
+
+
+5) Open the 2-WORKING and 3-WORKING SQL scripts, run them in that order
+
+
+6) Navigate in your browser to http://localhost/COP4710/index.php. If you see "Welcome to MLS Database, you did it right
